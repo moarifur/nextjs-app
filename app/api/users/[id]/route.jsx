@@ -15,7 +15,7 @@ export function GET(request, { params }) {
 }
 
 /*----------------------------- Updating an object ------------------------------
-TODO-01:  To create an user, we need to -
+TODO-01:  To update an user, we need to -
                 (1) Send a request to the user endpoint
                 (2) Include an user object in the body of the request
 
