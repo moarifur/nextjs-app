@@ -44,3 +44,21 @@ export async function PUT(request, { params }) {
     //  TODO-02:  (5) Else update the user  and return the updated user
     return NextResponse.json({id: 1, name: body.name})
 }
+
+
+/*----------------------------- Updating an object ------------------------------
+TODO:  To delete an user, we need to -
+            (1) Send a request to the user endpoint
+            (2) Fetch the user with the given id
+            (3) If id doesn't exist, return error code 404
+            (4) Else delete the user  and return the status code 200
+------------------------------------------------------------------------------ */
+// TODO-01:  (1) Send a request to the user endpoint
+export function DELETE(request, { params }) {
+    // TODO-01:  (2) Fetch the user with the given id
+    if (params.id > 10)
+        // TODO-01:  (3) If id doesn't exist, return error code 404
+        return NextResponse.json({ error: "User not found" }, { status: 404 })
+    // TODO-01:  (4) Else delete the user  and return the status code 200
+    return NextResponse.json({})
+}
